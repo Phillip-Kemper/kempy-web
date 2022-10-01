@@ -12,8 +12,13 @@ const Index = () => {
       }
     >
       <h1 className="text-2xl font-bold">
-        Software | Data Engineer looking for problems to solve.
+        Software Engineer looking for problems to solve.
       </h1>
+
+      <h1 className="">
+        Computer Science Student at Technical University Munich.
+      </h1>
+      <h1 className="">B. Sc. Computer Science at RWTH Aachen University.</h1>
     </Main>
   );
 };

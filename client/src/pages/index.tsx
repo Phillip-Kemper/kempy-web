@@ -12,7 +12,7 @@ const Index = () => {
       }
     >
       <h1 className="text-2xl font-bold">
-        Boilerplate code for your Nextjs project with Tailwind CSS
+        Software | Data Engineer looking for problems to solve.
       </h1>
     </Main>
   );

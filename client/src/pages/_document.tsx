@@ -9,7 +9,7 @@ class MyDocument extends Document {
         return (
             <Html lang={AppConfig.locale}>
                 <Head />
-                <body className="bg-background-default">
+                <body className="bg-background-default text-white">
                     <Main />
                     <NextScript />
                 </body>

@@ -29,8 +29,8 @@ const Index = () => {
             <h2>Notion Table Embedder</h2>
             <h2>Raycast Extension</h2>
 
-            <h1 className="text-2xl font-bold pt-8">Blogging</h1>
-            <h2>test</h2>
+            <h1 className="text-2xl font-bold pt-8">Blog</h1>
+            <h2>to be continued...</h2>
         </Main>
     );
 };

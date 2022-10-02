@@ -1,5 +1,5 @@
 {
-  "name": "next-js-boilerplate",
+  "name": "kempy-web",
   "version": "2.1.1",
   "scripts": {
     "dev": "next dev",
@@ -15,8 +15,7 @@
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
     "e2e": "start-server-and-test dev http://localhost:3000 cypress",
-    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless",
-    "prepare": "husky install"
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
   },
   "dependencies": {
     "next": "^12.3.0",

@@ -28,8 +28,12 @@ const Index = ({ allPostsData }) => {
       ))}
 
       <h1 className="pt-8 text-2xl font-bold">🎓 Education.</h1>
-      <h2>M. Sc. Informatics Candidate at Technical University Munich.</h2>
-      <h2>B. Sc. Computer Science at RWTH Aachen University.</h2>
+
+      <h2 className="text-lg font-bold">M. Sc. Informatics Candidate at Technical University Munich.</h2>
+      <h3 className="text-sm font-bold">2021-2023.</h3>
+
+      <h2 className="pt-4 text-lg font-bold">B. Sc. Computer Science at RWTH Aachen University.</h2>
+      <h3 className="text-sm font-bold">2017-2021.</h3>
 
       <h1 className="pt-8 text-2xl font-bold">📫 Contact.</h1>
       <h2>first name at last name dot tum dot de</h2>

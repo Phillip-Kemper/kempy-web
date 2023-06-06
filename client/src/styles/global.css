@@ -4,9 +4,9 @@ a {
   @apply text-blue-700;
 }
 
-a:hover {
+/* a:hover {
   @apply border-b-2 border-blue-700;
-}
+} */
 
 @tailwind components;
 

@@ -13,12 +13,12 @@ export async function getStaticProps() {
   };
 }
 
-const Index = ({ allPostsData }) => {
+const Index = ({ allPostsData }: any) => {
   return (
     <Main meta={<Meta title="Phillip Kemper" description="Phillip Kemper." />}>
       <h1 className="text-2xl font-bold">📚 Blog.</h1>
 
-      {allPostsData.map(({ date, title, id }) => (
+      {allPostsData.map(({ date, title, id }: any) => (
         <a href={"/posts/" + id} className="pt-4 text-white font-bold">
           <h2 className="text-lg ">{title}</h2>
           <h2 className="text-sm ">
@@ -29,10 +29,14 @@ const Index = ({ allPostsData }) => {
 
       <h1 className="pt-8 text-2xl font-bold">🎓 Education.</h1>
 
-      <h2 className="text-lg font-bold">M. Sc. Informatics Candidate at Technical University Munich.</h2>
+      <h2 className="text-lg font-bold">
+        M. Sc. Informatics Candidate at Technical University Munich.
+      </h2>
       <h3 className="text-sm font-bold">2021-2023.</h3>
 
-      <h2 className="pt-4 text-lg font-bold">B. Sc. Computer Science at RWTH Aachen University.</h2>
+      <h2 className="pt-4 text-lg font-bold">
+        B. Sc. Computer Science at RWTH Aachen University.
+      </h2>
       <h3 className="text-sm font-bold">2017-2021.</h3>
 
       <h1 className="pt-8 text-2xl font-bold">📫 Contact.</h1>

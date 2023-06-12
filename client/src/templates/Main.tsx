@@ -1,6 +1,6 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-import { AppConfig } from "@/utils/AppConfig";
+import { AppConfig } from '@/utils/AppConfig';
 
 type IMainProps = {
   meta: ReactNode;
@@ -35,8 +35,8 @@ const Main = (props: IMainProps) => (
               rel="noopener noreferrer"
             >
               twitter
-            </a>{" "}
-            &bull;{" "}
+            </a>{' '}
+            &bull;{' '}
             <a
               href="https://github.com/Phillip-Kemper"
               target="_blank"

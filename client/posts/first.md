@@ -1,6 +1,6 @@
 ---
-title: "A Primer on Data Availability For ZK Rollups"
-date: "2023-06-06"
+title: 'A Primer on Data Availability For ZK Rollups'
+date: '2023-06-06'
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.

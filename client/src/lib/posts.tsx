@@ -1,6 +1,6 @@
 import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
+import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
 
@@ -30,9 +30,8 @@ export function getSortedPostsData() {
   return allPostsData.sort((a: any, b: any) => {
     if (a.date < b.date) {
       return 1;
-    } else {
-      return -1;
     }
+    return -1;
   });
 }
 

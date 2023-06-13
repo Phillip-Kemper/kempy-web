@@ -1,6 +1,6 @@
-import { Meta } from '@/layouts/Meta';
-import { getSortedPostsData } from '@/lib/posts';
 import Date from '@/components/date';
+import * as Meta from '@/layouts/Meta';
+import { getSortedPostsData } from '@/lib/posts';
 // eslint-disable-next-line import/extensions
 import { Main } from '@/templates/Main';
 
@@ -15,11 +15,13 @@ export async function getStaticProps() {
 
 const Index = ({ allPostsData }: any) => {
   return (
-    <Main meta={<Meta title="Phillip Kemper" description="Phillip Kemper." />}>
+    <Main
+      meta={<Meta.Meta title="Phillip Kemper" description="Phillip Kemper." />}
+    >
       <h1 className="text-2xl font-bold">📚 Blog.</h1>
 
       {allPostsData.map(({ date, title, id }: any) => (
-        <a href={'/posts/' + id} className="pt-4 text-white font-bold">
+        <a key={id} href={`/posts/{$id}`} className="pt-4 font-bold text-white">
           <h2 className="text-lg ">{title}</h2>
           <h2 className="text-sm ">
             <Date dateString={date} />

@@ -1,10 +1,11 @@
-import type { ReactNode } from 'react';
+import Link from 'next/link';
+import type react from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
 
 type IMainProps = {
-  meta: ReactNode;
-  children: ReactNode;
+  meta: react.ReactNode;
+  children: react.ReactNode;
 };
 
 const Main = (props: IMainProps) => (
@@ -16,9 +17,9 @@ const Main = (props: IMainProps) => (
         <div className="border-b border-white">
           <div className="pt-16 pb-8">
             <div className="text-3xl font-bold text-white">
-              <a href="/" className="text-white">
+              <Link href="/" className="text-white">
                 {AppConfig.title}
-              </a>
+              </Link>
             </div>
 
             <div className="text-2xl font-bold">{AppConfig.description}</div>

@@ -1,19 +1,20 @@
-import Layout from '../../components/layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
-import Date from '../../components/date';
+
 import { Main } from '@/templates/Main';
 
-export default function Post({ postData }) {
+import Date from '../../components/date';
+import { getAllPostIds, getPostData } from '../../lib/posts';
+
+export default function Post({ postData }: { postData: any }) {
   return (
-    <Main>
+    <Main meta={undefined}>
       <Head>
         <title>{postData.title}</title>
       </Head>
       <article>
         <div className="border-b border-white ">
           <h1 className="text-3xl">{postData.title}</h1>
-          <div className="text-2xl pb-8">
+          <div className="pb-8 text-2xl">
             <Date dateString={postData.date} />
           </div>
         </div>
@@ -31,7 +32,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
   const postData = await getPostData(params.id);
   return {
     props: {

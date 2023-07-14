@@ -5,7 +5,7 @@ date: '2023-07-14'
 ## Introduction to ZK rollups and Data Availability
 Rollups inherit the security of the Ethereum base layer by making sure that transaction data is available on L1. This increases censorship resistance for L2s even if all L2 nodes are ceased or stop working. The underlying data availability differentiates ZK rollups from other L2 scaling approaches such as independent sidechains (Polygon PoS) or validiums.
 
-Within the architecture of ZK rollups, a lot of focus lies on the prover of the L2 network, while other characteristics such as data availability on Layer 1 (L1) are often widely overlooked.
+Within the architecture of ZK rollups, a lot of focus lies on the prover of the L2 network, while other characteristics such as L1 data availability are often widely overlooked.
 
 ZK rollups not only achieve scalability by off-loading transaction computations off-chain, but also allow to utilize various compression techniques for storing on L1. [As Vitalik Buterin explains](https://vitalik.ca/general/2021/01/05/rollup.html), parts of the transaction, which are only used for verification but not for computation of state updates itself, don’t need to be accessible on L1 (e.g. signature data). This leaves a lot of room for optimization for L2 rollups to achieve higher scalability.
 
@@ -19,10 +19,10 @@ It is also possible to store the complete transaction history of a rollup batch 
 zkSync Era and Starknet (which are arguably also more closed-source in comparison to the other two competitors) utilize state diffs, while Polygon zkEVM and Scroll store the whole transaction history.
 
 ## A quantitative comparison between zkSync Era and Polygon zkEVM
-Let’s look at an example and compare Starknet and Polygon zkEVM to see the differences in data availability based on state diffs and transaction history in practice.
+Let’s look at an example and compare Starknet and Polygon zkEVM to see the different data availability techniques in practice. We will compare the gas costs of committing a batch on L1 for both rollups. For this, we will look at the L1 contract of both rollups and decode the input data of the respective transactions. This way we can see how much data is stored on L1 for each transaction and calculate the average gas cost per transaction. 
 
 ### zkSync Era Committing Fees:
-If we investigate the [L1 Rollup Contract of zkSync Era](https://etherscan.io/address/0x3db52ce065f728011ac6732222270b3f2360d919), we can see two types of transactions: Committing and Proving Blocks. For our interest of data availability on L1, the commitment of the batch will be sufficient. We inspect and decode the input data of e.g. [Batch 56497](https://etherscan.io/tx/0x91550b5390c02414b5c717de15486ca0d39976f20a16f18f29ff87e5199245cf) and also compare it to the [zkSync block explorer](https://explorer.zksync.io/batch/56497). This rollup batch has a size of 521 transactions and gas usage of 1,268,047, which results in 2433.87 gas/transaction for this zkSync Era batch.
+If we investigate the [L1 Rollup Contract of zkSync Era](https://etherscan.io/address/0x3db52ce065f728011ac6732222270b3f2360d919), we can see two types of transactions: Committing and Proving Blocks. For our interest of data availability on L1, the commitment of the batch will be sufficient. We inspect and decode the input data of e.g. [Batch 56497](https://etherscan.io/tx/0x91550b5390c02414b5c717de15486ca0d39976f20a16f18f29ff87e5199245cf) and also compare it to the [zkSync block explorer](https://explorer.zksync.io/batch/56497). This rollup batch has a size of 521 transactions and gas usage of 1,268,047, which results in 2433.87 gas/transaction for this batch on zkSync Era.
 
 ![zkSync Era Batch](/images/zkSyncBatch.png)
 

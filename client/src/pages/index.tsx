@@ -21,7 +21,7 @@ const Index = ({ allPostsData }: any) => {
       <h1 className="text-2xl font-bold">📚 Blog.</h1>
 
       {allPostsData.map(({ date, title, id }: any) => (
-        <a key={id} href={`/posts/{$id}`} className="pt-4 font-bold text-white">
+        <a key={id} href={`/posts/${id}`} className="pt-4 font-bold text-white">
           <h2 className="text-lg ">{title}</h2>
           <h2 className="text-sm ">
             <Date dateString={date} />
@@ -42,7 +42,7 @@ const Index = ({ allPostsData }: any) => {
       <h3 className="text-sm font-bold">2017-2021.</h3>
 
       <h1 className="pt-8 text-2xl font-bold">📫 Contact.</h1>
-      <h2>first name at last name dot tum dot de</h2>
+      <h2 className="pt-4 text-lg font-bold">first name at last name dot tum dot de</h2>
 
       <a href="https://drive.google.com/file/d/126z1XVnPJy4HbYTS3N53VDX47dRcHzHu/view?usp=drive_link">
         check out my cv

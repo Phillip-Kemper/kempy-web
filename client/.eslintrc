@@ -31,7 +31,7 @@
         "plugin:prettier/recommended"
       ],
       "parserOptions": {
-        "project": "client/tsconfig.json",
+        "project": "tsconfig.json",
       },
       "rules": {
         "prettier/prettier": [

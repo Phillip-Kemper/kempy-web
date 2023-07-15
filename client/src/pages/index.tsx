@@ -46,7 +46,7 @@ const Index = ({ allPostsData }: any) => {
         first name at last name dot tum dot de
       </h2>
 
-      <a href="https://drive.google.com/file/d/126z1XVnPJy4HbYTS3N53VDX47dRcHzHu/view?usp=drive_link">
+      <a href="https://drive.google.com/file/d/1l9a192LzeFcQi4y73z7HfjUFRsMj2f1f/view?usp=sharing">
         check out my cv
       </a>
     </Main>

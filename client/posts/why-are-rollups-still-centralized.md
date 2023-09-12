@@ -8,9 +8,12 @@ In this article, I want to highlight which rollup components are still centraliz
 
 Simplified, centralization can occur in these three base components of a rollup.
 
-- Rollup Smart Contract and Bridge Contract
-- Sequencer
-- Provers (for ZK Rollups) or Validators (for Optimistic Rollups)
+-Rollup Smart Contract and Bridge Contract
+
+-Sequencer
+
+-Provers (for ZK Rollups) / Validators (for Optimistic Rollups)
+
 
 ## Centralized Smart Contracts
 How can the rollup contracts be centralized? Well, while they may be deployed immutable on a decentralized Ethereum base layer, it’s more likely that they are proxy contracts controlled by addresses from the rollup operator (e.g. a security council). It’s worth taking a look at the upgradeability and anonymity of the entities who can upgrade for different rollups, before depositing large funds into it. Bridges are still a big risk factor for any decentralized application. A delay in the upgradeability of the relevant contracts can increase the control for end users who should ideally have enough time to withdraw their assets. On the other hand, it increases the vulnerability of the rollup system in case of bugs.

@@ -21,9 +21,9 @@ const Index = ({ allPostsData }: any) => {
       <h1 className="text-2xl font-bold">📚 Blog.</h1>
 
       {allPostsData.map(({ date, title, id }: any) => (
-        <a key={id} href={`/posts/${id}`} className="pt-4 font-bold text-white">
+        <a key={id} href={`/posts/${id}`} className="pt-4 font-bold text-white ">
           <h2 className="text-lg ">{title}</h2>
-          <h2 className="text-sm ">
+          <h2 className="mb-1.5 text-sm ">
             <Date dateString={date} />
           </h2>
         </a>

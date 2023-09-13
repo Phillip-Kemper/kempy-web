@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { Analytics } from '@vercel/analytics/react';
 
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -12,6 +13,7 @@ class MyDocument extends Document {
         <body className="bg-background-default text-white">
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     );

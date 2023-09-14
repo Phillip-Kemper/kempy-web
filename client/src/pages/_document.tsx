@@ -11,9 +11,9 @@ class MyDocument extends Document {
       <Html lang={AppConfig.locale}>
         <Head />
         <body className="bg-background-default text-white">
+          <Analytics />
           <Main />
           <NextScript />
-          <Analytics />
         </body>
       </Html>
     );

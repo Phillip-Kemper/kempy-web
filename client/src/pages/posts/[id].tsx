@@ -11,7 +11,7 @@ export default function Post({ postData }: { postData: any }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article className="markdown-container">
         <div className="border-b border-white ">
           <h1 className="text-3xl">{postData.title}</h1>
           <div className="pb-8 text-2xl">

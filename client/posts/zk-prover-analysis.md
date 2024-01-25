@@ -41,14 +41,21 @@ In a third experiment, we measured proof aggregation time to be around 15s on ou
 
 All in all, our experiments lead to the following take-aways.
 
-1.  1. **Proof generation time is not affected by batch size or transaction type.**
-       This is due to the maximum capacity of the execution trace matrix being a limiting factor, with a fixed maximum step counter at $2^{23}$. The prover might not be optimized for batch proofs that don't fully utilize the trace matrix. Since the executor uses a predetermined matrix shape for all proofs, the polynomial constraints also have a fixed degree. This means that even proofs not fully utilizing the trace matrix still generate a proof over the entire matrix, leading to unchanged prover performance.
-       This aspect could soon be improved by developing proof systems with dynamic execution trace matrices that vary for different batches. Polygon has termed such optimizations as variable degree composite proofs ([VADCOPs](https://community.scroll.io/t/the-proof-overflow-problem/841)). VADCOPs enable state machines of varying sizes to generate proofs and compose them together.
+1.  **Proof generation time is not affected by batch size or transaction type.**
+
+    This is due to the maximum capacity of the execution trace matrix being a limiting factor, with a fixed maximum step counter at $2^{23}$. The prover might not be optimized for batch proofs that don't fully utilize the trace matrix. Since the executor uses a predetermined matrix shape for all proofs, the polynomial constraints also have a fixed degree. This means that even proofs not fully utilizing the trace matrix still generate a proof over the entire matrix, leading to unchanged prover performance.
+    This aspect could soon be improved by developing proof systems with dynamic execution trace matrices that vary for different batches. Polygon has termed such optimizations as variable degree composite proofs ([VADCOPs](https://community.scroll.io/t/the-proof-overflow-problem/841)). VADCOPs enable state machines of varying sizes to generate proofs and compose them together.
+
 2.  **Vertical scaling is possible.**
+
     While memory usage is constant around 500GiB, an increase in CPU power leads to increased prover performance. This behavior is expected to continue for even more CPU cores. Within ZKP generation multi-scalar multiplications (MSMs) and fast Fourier transformations (FFTs) are heavily used and computationally expensive. To tackle this bottleneck, they can be heavily parallelized and optimized with specialized hardware. GPUs, ASICs and in particular FPGAs are expected to significantly improve prover performance.
+
 3.  **Horizontal scaling is possible.**
+
     Fast proof aggregation allows to compute multiple proofs in parallel and can therefore greatly improve the throughput of a rollup. In a future blog article, we may provide a quantitative assessment of how large the throughput can get with proof aggregation.
+
 4.  **Sequence then prove allows for fast finality.**
+
     It would be wasteful to compute a batch proof for batch that doesn’t exhaust the complete execution trace, as the compute costs will be the same. Fast finality can still be achieved as the sequencer publishes transaction data on-chain on the Ethereum base layer. Still, it may take a longer time until the prover computes a proof.
 
 All in all, while ZK rollups have improved vastly in the past year, but particularly innovation in the area of hardware acceleration and multi-provers (Scroll making first steps with [TEE proofs](https://scroll.io/blog/scaling-security)) will change the current landscape and greatly improve performance and security.

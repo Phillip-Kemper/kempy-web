@@ -36,7 +36,7 @@ const Index = ({ allPostsData }: any) => {
       <h1 className="pt-8 text-2xl font-bold">🎓 Education.</h1>
 
       <h2 className="text-lg font-bold">
-        M. Sc. Informatics Candidate at Technical University Munich.
+        M. Sc. Informatics at Technical University Munich.
       </h2>
       <h3 className="text-sm font-bold">2021-2023.</h3>
 

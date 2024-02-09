@@ -47,10 +47,10 @@ const Index = ({ allPostsData }: any) => {
 
       <h1 className="pt-8 text-2xl font-bold">📫 Contact.</h1>
       <h2 className="pt-4 text-lg font-bold">
-        first name dot last name at tum dot de
+        first name dash last name at protonmail dot com
       </h2>
 
-      <a href="https://drive.google.com/file/d/1l9a192LzeFcQi4y73z7HfjUFRsMj2f1f/view?usp=sharing">
+      <a href="https://drive.google.com/file/d/18-xFPILC1GaUg40d6t7dZoT4UhNCc0UX/view?usp=sharing">
         check out my cv
       </a>
     </Main>

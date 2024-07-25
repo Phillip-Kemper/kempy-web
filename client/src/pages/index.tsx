@@ -44,7 +44,6 @@ const Index = ({ allPostsData }: any) => {
         B. Sc. Computer Science at RWTH Aachen University
       </h2>
       <h3 className="text-sm font-bold">2017-2021</h3>
-
     </Main>
   );
 };

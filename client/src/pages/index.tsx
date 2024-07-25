@@ -45,14 +45,6 @@ const Index = ({ allPostsData }: any) => {
       </h2>
       <h3 className="text-sm font-bold">2017-2021</h3>
 
-      <h1 className="pt-8 text-2xl font-bold">📫 Contact</h1>
-      <h2 className="pt-4 text-lg font-bold">
-        first name dash last name at protonmail dot com
-      </h2>
-
-      <a href="https://drive.google.com/file/d/18-xFPILC1GaUg40d6t7dZoT4UhNCc0UX/view?usp=sharing">
-        check out my cv
-      </a>
     </Main>
   );
 };

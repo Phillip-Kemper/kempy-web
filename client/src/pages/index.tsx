@@ -18,7 +18,7 @@ const Index = ({ allPostsData }: any) => {
     <Main
       meta={<Meta.Meta title="Phillip Kemper" description="Phillip Kemper." />}
     >
-      <h1 className="text-2xl font-bold">📚 Blog</h1>
+      <h1 className="text-2xl font-bold">📚 Writing</h1>
 
       {allPostsData.map(({ date, title, id }: any) => (
         <a

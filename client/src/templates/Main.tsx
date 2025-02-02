@@ -35,7 +35,7 @@ const Main = (props: IMainProps) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              twitter
+              x
             </a>{' '}
             &bull;{' '}
             <a

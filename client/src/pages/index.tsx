@@ -24,10 +24,10 @@ const Index = ({ allPostsData }: any) => {
         <a
           key={id}
           href={`/posts/${id}`}
-          className="pt-4 font-bold text-white "
+          className="pt-4 block transform transition-all duration-300 ease-out hover:scale-105 group"
         >
-          <h2 className="text-lg ">{title}</h2>
-          <h2 className="mb-1.5 text-sm ">
+          <h2 className="text-lg font-bold text-gray-100 group-hover:text-white">{title}</h2>
+          <h2 className="mb-1.5 text-sm text-gray-400 group-hover:text-gray-200">
             <Date dateString={date} />
           </h2>
         </a>
@@ -35,15 +35,18 @@ const Index = ({ allPostsData }: any) => {
 
       <h1 className="pt-8 text-2xl font-bold">🎓 Education</h1>
 
-      <h2 className="text-lg font-bold">
-        M. Sc. Informatics at Technical University Munich
-      </h2>
-      <h3 className="text-sm font-bold">2021-2023</h3>
-
-      <h2 className="pt-4 text-lg font-bold">
-        B. Sc. Computer Science at RWTH Aachen University
-      </h2>
-      <h3 className="text-sm font-bold">2017-2021</h3>
+      <div className="group block transform transition-all duration-300 ease-out hover:scale-105">
+        <h2 className="text-lg font-bold text-gray-100 group-hover:text-white">
+          M. Sc. Informatics at Technical University Munich
+        </h2>
+        <h3 className="text-sm font-bold text-gray-400 group-hover:text-gray-200">2021-2023</h3>
+      </div>
+      <div className="group block transform transition-all duration-300 ease-out hover:scale-105">
+        <h2 className="pt-4 text-lg font-bold text-gray-100 group-hover:text-white">
+          B. Sc. Computer Science at RWTH Aachen University
+        </h2>
+        <h3 className="text-sm font-bold text-gray-400 group-hover:text-gray-200">2017-2021</h3>
+      </div>
     </Main>
   );
 };

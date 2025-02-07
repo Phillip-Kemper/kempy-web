@@ -37,7 +37,7 @@ $$
 
 Here, $0xef011$ is a special prefix indicating that this is a *delegated account*. The execution client interprets this special prefix, looks up the associated contract address, and uses the contract’s bytecode whenever the EOA receives a call.
 
-This approach is somewhat like a standard Proxy pattern: many different EOAs can delegate to the **same** contract instance. However, each EOA keeps its **own** storage root, so reading/writing contract state goes into the EOA’s storage. The EOA effectively uses the bytecode of the delegated contract during execution, but the persistent storage belongs to the delegating EOA.
+This approach is similar to a standard Proxy pattern: many different EOAs can delegate to the **same** contract instance. However, each EOA keeps its **own** storage root, so reading/writing contract state goes into the EOA’s storage. The EOA effectively uses the bytecode of the delegated contract during execution, but the persistent storage belongs to the delegating EOA.
 
 As seen in the figure below the EOA has delegated its code to the smart contract using an EIP7702 transaction. Aftwards in another transaction, the EOA is called and the number variable has been set to 2 and thereby initialized the storage trie for that account.
 

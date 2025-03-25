@@ -56,6 +56,12 @@ export async function getPostData(id: string) {
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
+  // Get excerpt from the first paragraph or first 160 characters
+  const firstParagraph =
+    matterResult.content.split('\n\n')[0] || matterResult.content;
+
+  const excerpt = `${firstParagraph.replace(/[#*`]/g, '').slice(0, 160)}...`;
+
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(remarkMath)
@@ -69,6 +75,7 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
+    excerpt,
     ...matterResult.data,
   };
 }

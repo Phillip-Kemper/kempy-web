@@ -1,0 +1,18 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kemperino.com/sitemap.xml
+
+# Disallow admin and private routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+
+# Allow all other routes
+Allow: /posts/
+Allow: /blog/
+Allow: /about/
+Allow: /contact/ 

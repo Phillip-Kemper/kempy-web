@@ -18,15 +18,22 @@ type IMetaProps = {
     locale: string;
     type: string;
   };
+  keywords?: string[];
+  datePublished?: string;
+  dateModified?: string;
 };
 
 const Meta = (props: IMetaProps) => {
   const canonical = props.canonical || 'https://kemperino.com';
+  const keywords =
+    props.keywords?.join(', ') ||
+    'blog, technology, programming, web development';
 
   return (
     <Head>
       <title>{props.title}</title>
       <meta name="description" content={props.description} />
+      <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonical} />
 
       {/* Open Graph */}
@@ -70,6 +77,13 @@ const Meta = (props: IMetaProps) => {
         <meta key={image.url} name="twitter:image" content={image.url} />
       ))}
 
+      {/* Additional SEO Meta Tags */}
+      <meta name="author" content="Phillip Kemper" />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="generator" content="Next.js" />
+
       {/* JSON-LD */}
       <script
         type="application/ld+json"
@@ -80,11 +94,24 @@ const Meta = (props: IMetaProps) => {
             headline: props.title,
             description: props.description,
             url: canonical,
-            datePublished: new Date().toISOString(),
-            dateModified: new Date().toISOString(),
+            datePublished: props.datePublished || new Date().toISOString(),
+            dateModified: props.dateModified || new Date().toISOString(),
             author: {
               '@type': 'Person',
               name: 'Phillip Kemper',
+              url: 'https://kemperino.com',
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Kemperino',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://kemperino.com/logo.png',
+              },
+            },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': canonical,
             },
           }),
         }}

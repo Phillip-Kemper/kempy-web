@@ -81,6 +81,15 @@ img {
 .markdown-container li {
   margin-bottom: 10px; /* Adjust spacing between list items as needed */
 }
+
+/* Control height of specific blog post images */
+.markdown-container img[src="/images/tool_calls.png"] {
+  height: 400px; /* Or your desired height */
+  width: auto;   /* Maintain aspect ratio */
+  max-width: 100%; /* Keep the max-width behavior */
+  margin: 20px 0; /* Keep the margin */
+}
+
 /* Add after your existing styles */
 .katex-container {
   overflow-x: auto;
